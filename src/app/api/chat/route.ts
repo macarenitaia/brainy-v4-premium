@@ -41,7 +41,7 @@ export async function POST(req: Request) {
 
     // Clasificador de protocolos internos (silencioso)
     const { text: protocol } = await generateText({
-        model: openai('gpt-4o-mini'),
+        model: openai('gpt-4o-mini') as any,
         system: `Determina el protocolo operativo basado en la intención:
         - AGENDADO: Interés en citas, probar, agendar o dejar datos.
         - PERSUASION: Dudas de precio, competencia, por qué brAIny o beneficios.
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
     });
 
     const result = streamText({
-        model: openai('gpt-4o'),
+        model: openai('gpt-4o') as any,
         messages,
         system: `${SYSTEM_CORE}
         
