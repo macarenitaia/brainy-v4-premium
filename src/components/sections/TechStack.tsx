@@ -29,31 +29,33 @@ export default function TechStack() {
                     </p>
                 </div>
 
-                <div className="flex flex-col lg:flex-row items-center gap-16">
-                    {/* Logo Feature */}
+                <div className="flex flex-col lg:flex-row items-center gap-12 md:gap-16">
+                    {/* Logo Feature - Dock Aesthetic */}
                     <div className="lg:w-1/2 w-full order-2 lg:order-1">
-                        <div className="relative border-8 border-white p-4 group overflow-hidden bg-white/5 shadow-[20px_20px_0px_rgba(196,255,0,0.2)]">
-                            <img
-                                src="/assets/google-ecosystem.png"
-                                alt="Google Antigravity Ecosystem"
-                                className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+                        <div className="relative border-4 md:border-8 border-white p-2 md:p-4 group overflow-hidden bg-white/5 shadow-[15px_15px_0px_rgba(196,255,0,0.1)] md:shadow-[20px_20px_0px_rgba(196,255,0,0.2)]">
+                            <Image
+                                src="/assets/tech_stack_minimalist_grid.png"
+                                alt="brAIny Tech Stack Ecosystem"
+                                width={800}
+                                height={600}
+                                className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100 object-contain bg-black/40"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                                <p className="text-xl font-black italic uppercase tracking-widest text-neon-lime">Ecosistema Certificado Antigravity</p>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4 md:p-8">
+                                <p className="text-lg md:text-xl font-black italic uppercase tracking-widest text-neon-lime">Ecosistema Certificado Antigravity</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Master Grid */}
-                    <div className="lg:w-1/2 w-full grid grid-cols-1 md:grid-cols-2 gap-4 order-1 lg:order-2">
+                    <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 order-1 lg:order-2">
                         {techs.map((tech, i) => (
                             <div
                                 key={i}
-                                className={`p-6 border-2 border-white/10 bg-white/5 hover:bg-white hover:text-black transition-all duration-300 group cursor-default ${tech.color.replace('border-', 'hover:border-')}`}
+                                className={`p-5 md:p-6 border-2 border-white/10 bg-white/5 hover:bg-white hover:text-black transition-all duration-300 group cursor-default ${tech.color.replace('border-', 'hover:border-')}`}
                             >
-                                <div className="text-[10px] font-mono uppercase tracking-[0.4em] opacity-40 mb-3 group-hover:text-black/60 transition-colors">Tecnología</div>
-                                <div className="text-2xl font-black uppercase italic mb-2 leading-none group-hover:translate-x-1 transition-transform">{tech.name}</div>
-                                <div className="text-sm font-bold opacity-50 group-hover:opacity-100 leading-tight transition-opacity">{tech.use}</div>
+                                <div className="text-[9px] md:text-[10px] font-mono uppercase tracking-[0.4em] opacity-40 mb-2 md:mb-3 group-hover:text-black/60 transition-colors">Tecnología</div>
+                                <div className="text-xl md:text-2xl font-black uppercase italic mb-1 md:mb-2 leading-none group-hover:translate-x-1 transition-transform">{tech.name}</div>
+                                <div className="text-xs md:text-sm font-bold opacity-50 group-hover:opacity-100 leading-tight transition-opacity">{tech.use}</div>
                             </div>
                         ))}
                     </div>

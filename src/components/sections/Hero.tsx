@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Hero() {
     return (
@@ -10,24 +11,24 @@ export default function Hero() {
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="relative z-10 pt-10"
+                    className="relative z-10 pt-10 pb-20"
                 >
-                    <h1 className="text-[clamp(2.5rem,10vw,8rem)] leading-[0.8] font-black italic uppercase tracking-tighter">
+                    <h1 className="text-[clamp(2.5rem,12vw,8rem)] leading-[0.85] font-black italic uppercase tracking-tighter">
                         ¿VAS A <span className="text-neon-lime">CONTRAATACAR</span> O A MIRAR?
                     </h1>
-                    <p className="mt-8 text-xl md:text-4xl max-w-5xl font-black tracking-tight text-white leading-[1.1] uppercase">
+                    <p className="mt-8 text-xl md:text-3xl lg:text-4xl max-w-5xl font-black tracking-tight text-white leading-[1.1] uppercase">
                         Tu competencia ya está usando IA para <span className="text-neon-pink underline">robarte cuota de mercado</span>.
                     </p>
-                    <p className="mt-6 text-lg md:text-2xl max-w-3xl font-bold text-white/50 leading-relaxed italic">
+                    <p className="mt-6 text-base md:text-2xl max-w-3xl font-bold text-white/50 leading-relaxed italic">
                         No somos una "agencia de marketing". Somos tu unidad de contraataque táctico. Implementamos sistemas deterministas que cierran ventas mientras tú duermes.
                     </p>
                     <div className="mt-12 flex flex-wrap gap-6">
-                        <a href="/contacto" className="brutalist-button text-xl px-12 py-6">
+                        <Link href="/contacto" className="brutalist-button text-xl px-12 py-6 inline-block">
                             Operar Ahora (Lead Filter)
-                        </a>
-                        <a href="/contacto?ref=roi" className="px-10 py-5 border-4 border-white font-black uppercase hover:bg-neon-lime hover:text-black hover:border-neon-lime transition-all tracking-widest text-lg flex items-center">
+                        </Link>
+                        <Link href="/contacto?ref=roi" className="px-10 py-5 border-4 border-white font-black uppercase hover:bg-neon-lime hover:text-black hover:border-neon-lime transition-all tracking-widest text-lg flex items-center">
                             Auditoría ROI
-                        </a>
+                        </Link>
                     </div>
                 </motion.div>
 

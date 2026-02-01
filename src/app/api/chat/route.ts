@@ -53,6 +53,7 @@ export async function POST(req: Request) {
     const result = streamText({
         model: openai('gpt-4o') as any,
         messages,
+        maxSteps: 5,
         system: `${SYSTEM_CORE}
         
 [SISTEMA_STATUS]: Protocolo ${protocol} activo. 

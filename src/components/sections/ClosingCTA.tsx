@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function ClosingCTA() {
     return (
@@ -14,14 +15,17 @@ export default function ClosingCTA() {
                 <p className="text-2xl md:text-4xl font-bold max-w-3xl mx-auto mb-12 uppercase leading-tight">
                     No sé si brAIny es para ti. No trabajamos con cualquiera. Si prefieres seguir perdiendo dinero, no cliques aquí.
                 </p>
-                11
                 <div className="flex flex-col md:flex-row gap-6 justify-center">
-                    <button className="bg-black text-white px-12 py-6 text-3xl font-black uppercase italic hover:bg-white hover:text-black transition-all shadow-[10px_10px_0px_rgba(0,0,0,0.3)] active:scale-95">
-                        OPERAR AHORA
-                    </button>
-                    <button className="border-4 border-black px-12 py-6 text-2xl font-black uppercase hover:bg-black hover:text-white transition-all">
-                        AUDITORÍA ROI
-                    </button>
+                    <Link href="/contacto">
+                        <button className="bg-black text-white px-12 py-6 text-3xl font-black uppercase italic hover:bg-white hover:text-black transition-all shadow-[10px_10px_0px_rgba(0,0,0,0.3)] active:scale-95 w-full md:w-auto">
+                            OPERAR AHORA
+                        </button>
+                    </Link>
+                    <Link href="/contacto?ref=roi">
+                        <button className="border-4 border-black px-12 py-6 text-2xl font-black uppercase hover:bg-black hover:text-white transition-all w-full md:w-auto">
+                            AUDITORÍA ROI
+                        </button>
+                    </Link>
                 </div>
 
                 <p className="mt-12 text-sm font-black uppercase tracking-[0.5em] opacity-40">
