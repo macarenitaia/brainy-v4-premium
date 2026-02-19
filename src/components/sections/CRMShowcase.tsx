@@ -138,10 +138,12 @@ export default function CRMShowcase() {
                     <p className="text-xl font-bold italic opacity-60 max-w-2xl">
                         Este sistema se adapta a Hostelería, Inmobiliaria o Clínicas. Es tu secretaria inteligente 24/7, agendando, cobrando y fidelizando mientras tú descansas.
                     </p>
-                    <button className="brutalist-button px-10 py-5 text-xl flex items-center gap-4 group">
-                        SOLICITAR DEMO EN VIVO
-                        <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-                    </button>
+                    <Link href="/contacto">
+                        <button className="brutalist-button px-10 py-5 text-xl flex items-center gap-4 group">
+                            SOLICITAR DEMO EN VIVO
+                            <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

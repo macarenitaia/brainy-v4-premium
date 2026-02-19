@@ -39,7 +39,7 @@ export default function Footer() {
                             <li><Link href="/servicios" className="hover:text-neon-lime transition-colors">Servicios</Link></li>
                             <li><Link href="/sectores" className="hover:text-neon-lime transition-colors">Sectores</Link></li>
                             <li><Link href="/manifiesto" className="hover:text-neon-lime transition-colors">Manifiesto</Link></li>
-                            <li><Link href="/contacto" className="hover:text-neon-lime transition-colors">Operativa</Link></li>
+                            <li><Link href="/servicios" className="hover:text-neon-lime transition-colors">Operativa</Link></li>
                         </ul>
                     </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
                                     <span className="text-neon-pink">+340%</span>
                                 </div>
                             </div>
-                            <Link href="/contacto" className="block w-full">
+                            <Link href="/contacto?ref=roi" className="block w-full">
                                 <button className="w-full bg-white text-black p-4 font-black uppercase italic hover:bg-neon-lime transition-all shadow-[-5px_5px_0px_#C4FF00] hover:shadow-[-10px_10px_0px_#C4FF00]">
                                     Iniciar Auditoría IA
                                 </button>

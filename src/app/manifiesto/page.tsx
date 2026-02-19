@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Shield, Microscope, Target } from 'lucide-react';
+import Link from 'next/link';
 import Navbar from '@/components/layout/Navbar';
 
 const principles = [
@@ -79,9 +80,11 @@ export default function Manifiesto() {
                             <p className="text-xl md:text-2xl font-bold mb-12 max-w-2xl leading-tight">
                                 No te cobraremos por "intentar" cosas. Te cobraremos por implementar sistemas que agendan, venden y resuelven 24/7 sin pedir vacaciones ni aumento de sueldo.
                             </p>
-                            <button className="bg-black text-white text-2xl font-black px-12 py-6 uppercase italic hover:bg-white hover:text-black transition-colors flex items-center gap-4">
-                                QUIERO ESTO EN MI EQUIPO <ArrowRight />
-                            </button>
+                            <Link href="/contacto">
+                                <button className="bg-black text-white text-2xl font-black px-12 py-6 uppercase italic hover:bg-white hover:text-black transition-colors flex items-center gap-4">
+                                    QUIERO ESTO EN MI EQUIPO <ArrowRight />
+                                </button>
+                            </Link>
                         </div>
 
                         <div className="py-20 text-center">
