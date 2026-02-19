@@ -3,12 +3,12 @@
 import Image from 'next/image';
 
 const techs = [
-    { name: 'Google Antigravity', use: 'Orquestación de Agentes de Élite', color: 'border-neon-lime' },
-    { name: 'Gemini 1.5 Pro', use: 'Razonamiento Multimodal Avanzado', color: 'border-white' },
-    { name: 'Next.js 15', use: 'Frontend de Ultra-Alto Rendimiento', color: 'border-white' },
-    { name: 'OpenAI GPT-4o', use: 'Cerebro de Procesamiento Lógico', color: 'border-neon-pink' },
-    { name: 'Supabase', use: 'Memoria y RAG Vectorial', color: 'border-white' },
-    { name: 'Google Cloud', use: 'Escalabilidad Global Determinista', color: 'border-white' }
+    { name: 'Google Antigravity', use: 'Orquestación de Agentes de Élite', color: 'hover:border-neon-lime' },
+    { name: 'Gemini 1.5 Pro', use: 'Razonamiento Multimodal Avanzado', color: 'hover:border-white' },
+    { name: 'Next.js 15', use: 'Frontend de Ultra-Alto Rendimiento', color: 'hover:border-white' },
+    { name: 'OpenAI GPT-4o', use: 'Cerebro de Procesamiento Lógico', color: 'hover:border-neon-pink' },
+    { name: 'Supabase', use: 'Memoria y RAG Vectorial', color: 'hover:border-white' },
+    { name: 'Google Cloud', use: 'Escalabilidad Global Determinista', color: 'hover:border-white' },
 ];
 
 export default function TechStack() {
@@ -46,16 +46,19 @@ export default function TechStack() {
                         </div>
                     </div>
 
-                    {/* Master Grid */}
+                    {/* Tech Grid — texto puro, sin iconos */}
                     <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 order-1 lg:order-2">
                         {techs.map((tech, i) => (
                             <div
                                 key={i}
-                                className={`p-5 md:p-6 border-2 border-white/10 bg-white/5 hover:bg-white hover:text-black transition-all duration-300 group cursor-default ${tech.color.replace('border-', 'hover:border-')}`}
+                                className={`p-5 md:p-6 border-2 border-white/10 bg-white/5 hover:bg-white hover:text-black transition-all duration-300 group cursor-default ${tech.color}`}
                             >
-                                <div className="text-[9px] md:text-[10px] font-mono uppercase tracking-[0.4em] opacity-40 mb-2 md:mb-3 group-hover:text-black/60 transition-colors">Tecnología</div>
-                                <div className="text-xl md:text-2xl font-black uppercase italic mb-1 md:mb-2 leading-none group-hover:translate-x-1 transition-transform">{tech.name}</div>
-                                <div className="text-xs md:text-sm font-bold opacity-50 group-hover:opacity-100 leading-tight transition-opacity">{tech.use}</div>
+                                <div className="text-xl md:text-2xl font-black uppercase italic mb-2 leading-none group-hover:translate-x-1 transition-transform">
+                                    {tech.name}
+                                </div>
+                                <div className="text-xs md:text-sm font-bold opacity-50 group-hover:opacity-100 leading-tight transition-opacity">
+                                    {tech.use}
+                                </div>
                             </div>
                         ))}
                     </div>

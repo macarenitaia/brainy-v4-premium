@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -34,9 +33,12 @@ export default function Navbar() {
                             {item.name}
                         </Link>
                     ))}
-                    <button className="bg-neon-lime text-black px-6 py-2 font-black uppercase text-xs tracking-widest hover:bg-white transition-all border-2 border-transparent hover:border-black active:scale-95 shadow-[4px_4px_0px_#FF0055] hover:shadow-none translate-y-0 hover:translate-y-[2px] hover:translate-x-[2px]">
+                    <Link
+                        href="/contacto?ref=roi"
+                        className="bg-neon-lime text-black px-6 py-2 font-black uppercase text-xs tracking-widest hover:bg-white transition-all border-2 border-transparent hover:border-black active:scale-95 shadow-[4px_4px_0px_#FF0055] hover:shadow-none translate-y-0 hover:translate-y-[2px] hover:translate-x-[2px]"
+                    >
                         Auditoría
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -67,9 +69,13 @@ export default function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-                        <button className="brutalist-button text-lg py-4">
+                        <Link
+                            href="/contacto?ref=roi"
+                            onClick={() => setIsOpen(false)}
+                            className="brutalist-button text-lg py-4 text-center block"
+                        >
                             Auditoría
-                        </button>
+                        </Link>
                     </motion.div>
                 )}
             </AnimatePresence>
